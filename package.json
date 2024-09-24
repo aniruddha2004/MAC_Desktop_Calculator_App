@@ -1,0 +1,21 @@
+{
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "description": "A Mac-like calculator with backend integration.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-electron": "electron .",
+    "package-win": "electron-packager . calculator-app --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "author": "Aniruddha Ghosh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "electron": "^32.1.1",
+    "electron-packager": "^17.1.1"
+  }
+}
