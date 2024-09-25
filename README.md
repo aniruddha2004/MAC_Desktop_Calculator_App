@@ -55,7 +55,7 @@ A fully functional, cross-platform, Mac-like calculator built using HTML, CSS, J
 ![Basic Mode](output/basic-mode.png)
 
 ### Scientific Mode
-![Scientific Mode](path/to/scientific-mode.png)
+![Scientific Mode](output/scientific-mode.png)
 
 ## Contributing
 
