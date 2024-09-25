@@ -7,7 +7,8 @@
     "start": "node server.js",
     "start-electron": "electron .",
     "start-both": "concurrently \"npm run start\" \"npm run start-electron\"",
-    "package-win": "electron-packager . calculator-app --platform=win32 --arch=x64 --out=dist --overwrite"
+    "package-win": "electron-packager . calculator-app --platform=win32 --arch=x64 --out=dist --overwrite",
+    "build": "electron-builder"
   },
   "author": "Aniruddha Ghosh",
   "license": "ISC",
@@ -18,6 +19,38 @@
   "devDependencies": {
     "concurrently": "^9.0.1",
     "electron": "^32.1.1",
+    "electron-builder": "^25.0.5",
     "electron-packager": "^17.1.1"
+  },
+  "build": {
+    "appId": "com.yourdomain.calculatorapp",
+    "productName": "CalculatorApp",
+    "files": [
+      "public/**/*",
+      "main.js",
+      "server.js",
+      "start.js",
+      "package.json"
+    ],
+    "extraFiles": [
+      {
+        "from": "node_modules",
+        "to": "node_modules",
+        "filter": ["!**/node_modules/**"]
+      }
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
   }
 }
