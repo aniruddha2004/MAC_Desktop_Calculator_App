@@ -23,8 +23,8 @@ A fully functional, cross-platform, Mac-like calculator built using HTML, CSS, J
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/calculator-app.git
-    cd calculator-app
+    git clone https://github.com/aniruddha2004/MAC_Desktop_Calculator_App.git
+    cd MAC_Desktop_Calculator_App
     ```
 
 2. **Install dependencies**:
