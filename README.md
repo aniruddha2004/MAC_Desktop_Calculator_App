@@ -61,10 +61,6 @@ A fully functional, cross-platform, Mac-like calculator built using HTML, CSS, J
 
 Contributions are welcome! Feel free to open issues or submit pull requests for enhancements and bug fixes.
 
-## License
-
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
-
 ## Author
 
 **Aniruddha Ghosh**
