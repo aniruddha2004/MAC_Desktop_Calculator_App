@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "start-electron": "electron .",
+    "start-both": "concurrently \"npm run start\" \"npm run start-electron\"",
     "package-win": "electron-packager . calculator-app --platform=win32 --arch=x64 --out=dist --overwrite"
   },
   "author": "Aniruddha Ghosh",
@@ -15,6 +16,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "concurrently": "^9.0.1",
     "electron": "^32.1.1",
     "electron-packager": "^17.1.1"
   }
