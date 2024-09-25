@@ -48,11 +48,11 @@
       <div class="row">
         <button onclick="calc('!')" class="scientific laptop">x!</button>
         <button onclick="calc('sin(')" class="scientific laptop normal">sin</button>
-        <button onclick="calc('asin(')" class="scientific laptop inverse" style="display: none;">asin</button>
+        <button onclick="calc('asin(')" class="scientific laptop inverse" style="display: none;">sin<sup>-1</sup></button>
         <button onclick="calc('cos(')" class="scientific laptop normal">cos</button>
-        <button onclick="calc('acos(')" class="scientific laptop inverse" style="display: none;">acos</button>
+        <button onclick="calc('acos(')" class="scientific laptop inverse" style="display: none;">cos<sup>-1</sup></button>
         <button onclick="calc('tan(')" class="scientific laptop normal">tan</button>
-        <button onclick="calc('atan(')" class="scientific laptop inverse" style="display: none;">atan</button>
+        <button onclick="calc('atan(')" class="scientific laptop inverse" style="display: none;">tan<sup>-1</sup></button>
         <button onclick="calc('e')" class="scientific laptop">e</button>
         <button onclick="calc('E')" class="scientific laptop">EE</button>
         <button onclick="calc('1')">1</button>
@@ -67,9 +67,12 @@
         <button onclick="toggleDegreeRadian()" class="scientific laptop radius-left" id="radian-btn" style="display: none;">
           Rad
         </button>
-        <button onclick="calc('sinh(')" class="scientific laptop">sinh</button>
-        <button onclick="calc('cosh(')" class="scientific laptop">cosh</button>
-        <button onclick="calc('tanh(')" class="scientific laptop">tanh</button>
+        <button onclick="calc('sinh(')" class="scientific laptop normal">sinh</button>
+        <button onclick="calc('asinh(')" class="scientific laptop inverse" style="display: none;">sinh<sup>-1</sup></button>
+        <button onclick="calc('cosh(')" class="scientific laptop  normal">cosh</button>
+        <button onclick="calc('acosh(')" class="scientific laptop inverse" style="display: none;">cosh<sup>-1</sup></button>
+        <button onclick="calc('tanh(')" class="scientific laptop normal">tanh</button>
+        <button onclick="calc('atanh(')" class="scientific laptop inverse" style="display: none;">tanh<sup>-1</sup></button>
         <button onclick="calc('π')" class="scientific laptop">π</button>
         <button onclick="calc('Rand')" class="scientific laptop">Rand</button>
         <button onclick="calc('0')" class="zero">0</button>

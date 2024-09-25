@@ -29,25 +29,45 @@ function evaluate(equation, degreeMode, inv) {
   equation = equation.replaceAll("e", "Math.E");
   equation = equation.replaceAll("log", "Math.log10");
   equation = equation.replaceAll("ln", "Math.log");
-  if (degreeMode) {
-    if (inv == 0) {
-      equation = equation.replaceAll("sin(", "Math.sin(Math.PI/180*");
-      equation = equation.replaceAll("cos(", "Math.cos(Math.PI/180*");
-      equation = equation.replaceAll("tan(", "Math.tan(Math.PI/180*");
-    } else {
-      equation = equation.replaceAll("asin(", "Math.asin(Math.PI/180*");
-      equation = equation.replaceAll("acos(", "Math.acos(Math.PI/180*");
-      equation = equation.replaceAll("atan(", "Math.atan(Math.PI/180*");
+  // if (degreeMode) {
+  //   if (inv == 0) {
+  //     equation = equation.replaceAll("sin(", "Math.sin(Math.PI/180*");
+  //     equation = equation.replaceAll("cos(", "Math.cos(Math.PI/180*");
+  //     equation = equation.replaceAll("tan(", "Math.tan(Math.PI/180*");
+  //   } else {
+  //     equation = equation.replaceAll("asin(", "(180/Math.PI)*Math.asin(");
+  //     equation = equation.replaceAll("acos(", "(180/Math.PI)*Math.acos(");
+  //     equation = equation.replaceAll("atan(", "(180/Math.PI)*Math.atan(");
+  //   }
+  // } else {
+  //   if (inv == 0) {
+  //     equation = equation.replaceAll("sin", "Math.sin");
+  //     equation = equation.replaceAll("cos", "Math.cos");
+  //     equation = equation.replaceAll("tan", "Math.tan");
+  //   } else {
+  //     equation = equation.replaceAll("asin", "Math.asin");
+  //     equation = equation.replaceAll("acos", "Math.acos");
+  //     equation = equation.replaceAll("atan", "Math.atan");
+  //   }
+  // }
+  if(inv == 0){
+    equation = equation.replaceAll("sin", "Math.sin");
+    equation = equation.replaceAll("cos", "Math.cos");
+    equation = equation.replaceAll("tan", "Math.tan");
+    if(degreeMode){
+      equation = equation.replaceAll("sin(", "sin(Math.PI/180*");
+      equation = equation.replaceAll("cos(", "cos(Math.PI/180*");
+      equation = equation.replaceAll("tan(", "tan(Math.PI/180*");
     }
-  } else {
-    if (inv == 0) {
-      equation = equation.replaceAll("sin", "Math.sin");
-      equation = equation.replaceAll("cos", "Math.cos");
-      equation = equation.replaceAll("tan", "Math.tan");
-    } else {
-      equation = equation.replaceAll("asin", "Math.asin");
-      equation = equation.replaceAll("acos", "Math.acos");
-      equation = equation.replaceAll("atan", "Math.atan");
+  }
+  else {
+    equation = equation.replaceAll("asin", "Math.asin");
+    equation = equation.replaceAll("acos", "Math.acos");
+    equation = equation.replaceAll("atan", "Math.atan");
+    if(degreeMode){
+      equation = equation.replaceAll("Math.asin(", "(180/Math.PI)*Math.asin(");
+      equation = equation.replaceAll("Math.acos(", "(180/Math.PI)*Math.acos(");
+      equation = equation.replaceAll("Math.atan(", "(180/Math.PI)*Math.atan(");
     }
   }
   equation = equation.replaceAll("π", "Math.PI");
